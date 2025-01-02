@@ -58,14 +58,9 @@ function Home1({ handlePageChange }) {
       <div className="container">
         {/* Left Section */}
         <div className="left-section">
-          <a href="/login.html">
             <button className="btn" onClick={() => handlePageChange('login')}>Log In</button>
-          </a>
-          <a href="/signup.html">
             <button className="btn" onClick={() => handlePageChange('signup')}>Sign Up</button>
-          </a>
         </div>
-
         {/* Right Section */}
         <div className="right-section">
           <img
@@ -131,12 +126,44 @@ function Login({ handlePageChange }) {
 
 function Signup({ handlePageChange }) {
   return (
-    <div>
-      <h1>Signup Page</h1>
-      <button onClick={() => handlePageChange('home')}>Home</button>
+      <div className="signup-container">
+        {/* Left Section */}
+        <div className='container'>
+          <img
+            src="path_to_your_logo.png" // Replace with the actual logo path
+            alt="AI Mentee Logo"
+            className="logo"
+          />
+          <div className="illustration">
+            {/* Replace this with an actual image or illustration */}
+            <img src="path_to_illustration.png" alt="Illustration" />
+          </div>
+        </div>
+  
+        {/* Right Section */}
+        <div className="right-section">
+          <form className="signup-form">
+            <h2>Sign In</h2>
+            <label>First Name</label>
+            <input type="text" name="firstName" placeholder="Enter First name" />
+            
+            <label>Last Name</label>
+            <input type="text" name="lastName" placeholder="Enter Last name" />
+            
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username" />
+            
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter Password" />
+            
+            <button type="submit" className="signup-button">Sign In</button>
+          </form>
+          <button onClick={() => handlePageChange('home')}>Home</button>
     </div>
-  );
-}
+        </div>
+    );
+  };
+  
 
 function CourseSelection({ handlePageChange }) {
   return (
